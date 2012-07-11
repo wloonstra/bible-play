@@ -1,0 +1,12 @@
+@(categories: List[Category])
+
+<div id="category-menu">
+    <ul class="menu">
+
+        @categories.map { category =>
+            <li>
+                <a href=@category.url>@category.name (@category.numberOfTexts)</a>
+            </li>
+        }
+    </ul>
+</div>
